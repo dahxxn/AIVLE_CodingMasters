@@ -1,7 +1,7 @@
-# AIVLE_CodingMasters_1th
-## 👨‍💻 KT 에이블스쿨 7기 - 코딩마스터즈 1차 문제 풀이
+# AIVLE_CodingMasters
+## 👨‍💻 KT 에이블스쿨 7기 - 코딩마스터즈 문제 풀이 
 
-이 리포지토리는 **KT 에이블스쿨 7기 코딩마스터스 1차 테스트 문제들**을 풀고 정리한 공간입니다.  
+이 리포지토리는 **KT 에이블스쿨 7기 코딩마스터스 문제들**을 풀고 정리한 공간입니다.  
 문제는 난이도별로 구분되어 있으며, 각 문제의 풀이 코드와 간단한 설명을 함께 제공합니다.
 
 ---
@@ -9,11 +9,15 @@
 ## 📁 폴더 구조
 
 ```
-📦 AIVLE_CodingMasters_1th
-├ 📁 기초
-├ 📁 초급
-├ 📁 중급
-├ 📁 고급 
+📍 root 
+├ 📦 AIVLE_CodingMasters_1th
+|    ├ 📁 기초
+|    ├ 📁 초급
+|    ├ 📁 중급
+|    ├ 📁 고급
+├ 📦 AIVLE_CodingMasters_2th
+            ⋮
+├ 📦 AIVLE_CodingMasters_nth
 ├ 📝 README.md
 ```
 ---
