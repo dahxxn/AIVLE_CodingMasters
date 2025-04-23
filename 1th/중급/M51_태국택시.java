@@ -1,5 +1,6 @@
 import java.util.*;
 
+//2 - 2:42 
 class road implements Comparable<road>{
 	int from; 
 	int to; 
@@ -19,18 +20,6 @@ class road implements Comparable<road>{
 
 public class M51_태국택시 {
     static int[] tree;
-
-
-    static int find(int x) { // tree 의 대표 정점이 
-        if (tree[x] == x) return x;
-        return tree[x] = find(tree[x]);
-    }
-
-    static void union(int x, int y) {
-        int rootX = find(x);
-        int rootY = find(y);
-        if (rootX != rootY) tree[rootY] = rootX;
-    }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -61,5 +50,17 @@ public class M51_태국택시 {
         }
 
         System.out.println(totalCost);
+    }
+    
+
+    static int find(int x) {
+        if (tree[x] == x) return x;
+        return tree[x] = find(tree[x]);
+    }
+
+    static void union(int x, int y) {
+        int rootX = find(x);
+        int rootY = find(y);
+        if (rootX != rootY) tree[rootY] = rootX;
     }
 }

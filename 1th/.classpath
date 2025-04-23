@@ -8,5 +8,6 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="기초"/>
 	<classpathentry kind="src" path="초급"/>
+	<classpathentry kind="src" path="중급"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
