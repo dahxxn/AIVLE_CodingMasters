@@ -8,14 +8,19 @@ import java.util.*;
 public class M68_콘웨이의생명게임 {
 	static int N;
 	static int[][] map;
-
 	static int[] row = { -1, -1, -1, 0, 0, 1, 1, 1 };
 	static int[] col = { -1, 0, 1, -1, 1, -1, 0, 1 };
 
 	public static void main(String[] args) throws IOException {
+		input(); 
 
+		for (int i = 0; i < N; i++) oneGeneration(); 
+
+		output(); 
+	}
+	
+	public static void input() {
 		Scanner sc = new Scanner(System.in);
-
 		N = sc.nextInt();
 		map = new int[5][5];
 
@@ -25,22 +30,18 @@ public class M68_콘웨이의생명게임 {
 				map[i][j] = Integer.parseInt(Character.toString(r.charAt(j)));
 			}
 		}
-
-		for (int i = 0; i < N; i++) {
-			oneGeneration();
-		}
-
+		sc.close();
+	}
+	
+	public static void output() {
 		for (int i = 0; i < 5; i++) {
 			for (int j = 0; j < 5; j++) {
 				System.out.print(map[i][j]);
 			}
 			System.out.println();
 		}
-
-		sc.close();
-
 	}
-
+	
 	public static boolean isValidIdx(int row, int col) {
 		return row >= 0 && row < 5 && col >= 0 && col < 5;
 	}
@@ -75,7 +76,6 @@ public class M68_콘웨이의생명게임 {
 	}
 
 	public static int countArroundAlive(int i, int j) {
-
 		int count = 0;
 		for (int idx = 0; idx < 8; idx++) {
 			int r = i + row[idx];
