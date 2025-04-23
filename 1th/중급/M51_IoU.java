@@ -4,6 +4,7 @@ import java.util.*;
 
 //9:30 - 11:00 
 
+
 class Rectangle {
 	int x;
 	int y;
@@ -42,7 +43,7 @@ class Rectangle {
 public class M51_IoU {
 	static int N;
 	static List<Rectangle> rectangles = new ArrayList<>();
-	static int[] pairs = { 1, 2 };
+	static int[] pairs = { 0, 1 };
 	static double maxIoU = 0;
 
 	public static void main(String[] args) {
@@ -62,8 +63,7 @@ public class M51_IoU {
 				Rectangle other = rectangles.get(j);
 				double IoU = other.getIoU(rect);
 
-				if (IoU > maxIoU
-						|| (IoU - maxIoU > -1e-9 && (j < pairs[0] || (j == pairs[0] && i < pairs[1])))) {
+				if (IoU > maxIoU) {
 					maxIoU = IoU;
 					pairs[0] = j;
 					pairs[1] = i;
