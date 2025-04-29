@@ -13,9 +13,7 @@ public class M68_콘웨이의생명게임 {
 
 	public static void main(String[] args) throws IOException {
 		input(); 
-
 		for (int i = 0; i < N; i++) oneGeneration(); 
-
 		output(); 
 	}
 	
@@ -27,7 +25,7 @@ public class M68_콘웨이의생명게임 {
 		for (int i = 0; i < 5; i++) {
 			String r = sc.next();
 			for (int j = 0; j < 5; j++) {
-				map[i][j] = Integer.parseInt(Character.toString(r.charAt(j)));
+				map[i][j] = r.charAt(j) - '0';
 			}
 		}
 		sc.close();

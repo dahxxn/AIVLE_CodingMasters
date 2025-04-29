@@ -10,7 +10,7 @@ class shark{
 	}
 }
 
-public class M56_양육강식 {
+public class M75_양육강식 {
 	
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
